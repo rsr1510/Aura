@@ -10,12 +10,17 @@ AURA is an innovative ASL (American Sign Language) communication platform that b
 - High-accuracy hand tracking and gesture interpretation using MediaPipe
 - Support for extended ASL vocabulary (including custom-added signs)
 
-### 2. Speech Recognition
+### 2. Emotion Based Word Gesture Recognition
+- Integration of emotion detection with gesture recognition
+- Detects the expressions of sign language user and analyses the emotion
+- With this emotion, the idea is to exhibit toned and enhanced natural voice as the output speech
+
+### 3. Speech Recognition
 - Real-time speech-to-text conversion
 - Clear and accurate transcription
 - Support for continuous speech recognition
 
-### 3. Voice Generation
+### 4. Voice Generation
 - Basic text-to-speech conversion
 - Proof of concept for emotion-based voice modulation (implemented separately)
 - Demonstration of natural-sounding speech with tonal variations
@@ -27,19 +32,12 @@ AURA is an innovative ASL (American Sign Language) communication platform that b
 - 🚧 Speech to Sign Language: Proposed feature using 3D avatars
 
 ### 2. Advanced Emotion Integration
-- 🚧 Integration of emotion detection with gesture recognition
 - 🚧 Real-time emotion-based voice modulation
-- ✅ Proof of concept for emotion-based voice generation (separate implementation)
 
 ### 3. 3D Avatar Visualization
 - 🚧 Text-to-Sign Language visualization (proposed)
 - 🚧 Blender integration for animation generation (partially implemented, rendering issues present)
 - 🚧 Real-time avatar animation
-
-### 4. 3D Avatar Visualization (Experimental)
-- Text-to-Sign Language visualization using 3D avatars
-- Blender integration for animation generation
-- Note: Currently experiencing rendering issues in the animation output
 
 ## 🗂️ Project Structure
 
