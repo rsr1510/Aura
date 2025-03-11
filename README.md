@@ -1,119 +1,113 @@
 # AURA - ASL Understanding and Recognition Assistant
 
-AURA is a web application that provides real-time American Sign Language (ASL) recognition and speech-to-sign translation capabilities.
+AURA is an innovative ASL (American Sign Language) communication platform that bridges the gap between the deaf and hearing communities through advanced AI and computer vision technologies.
 
-## Features
+## 🌟 Key Features
 
-- ASL to Speech Translation
-- Speech to Sign Language Translation
-- Real-time Video Recognition
-- Text-to-Speech Output
+### 1. Bi-Directional Communication
+- **Sign Language to Speech**: Real-time translation of ASL gestures to spoken words
+- **Speech to Sign Language**: Conversion of spoken words to ASL demonstrations (via 3D avatar)
 
-## Prerequisites
+### 2. Emotion-Based Voice Generation
+- Intelligent analysis of signed words and emotions
+- Natural and toned voice generation based on detected emotions
+- Dynamic voice modulation for more natural-sounding speech
 
+### 3. Custom Gesture Recognition
+- Support for custom ASL gestures
+- Real-time hand tracking and gesture interpretation
+- High-accuracy word gesture recognition
+
+### 4. 3D Avatar Visualization (Experimental)
+- Text-to-Sign Language visualization using 3D avatars
+- Blender integration for animation generation
+- Note: Currently experiencing rendering issues in the animation output
+
+## 🗂️ Project Structure
+
+```
+aura/
+├── word_gesture/          # Emotion detection module
+│   ├── gesture_training.py    # Code to train the gestures for detection
+│   ├── action (1).h5          # Trained model for gesture recognition
+│   ├── emotion_training.py     # Code to train for detection of emotioins while detecting gestures
+├── backend/                    # FastAPI backend
+│   ├── app.py                 # Main FastAPI server with API endpoints
+│   ├── training.py            # Model training script using ASL dataset
+│   ├── testing.py             # Model testing and validation
+│   ├── soundtest.py           # Voice modulation and emotion-based generation
+│   ├── sign_language_model.h5 # Pre-trained ASL recognition model
+│   ├── data.pickle           # Label encoder data
+│   ├── requirements.txt      # Python dependencies
+│   └── static/               # Static files and generated content
+├── frontend/                  # React frontend
+│   ├── src/
+│   │   └── pages/features/   # Core functionality implementation
+│   ├── public/               # Public assets
+│   └── package.json          # Node dependencies
+└── asl_gestures_data.json    # Custom gesture mappings
+```
+
+## 🛠️ Technical Implementation
+
+### Machine Learning Pipeline
+1. **Data Collection**: ASL dataset from Kaggle
+2. **Preprocessing**: Landmark generation from hand gestures using MediaPipe
+3. **Model Training**: Custom neural network for gesture recognition
+4. **Emotion Detection**: Integrated emotion analysis for voice modulation
+5. **Voice Generation**: Emotion-aware text-to-speech synthesis
+
+## 🚀 Getting Started
+
+### Prerequisites
 - Python 3.8+
 - Node.js 14+
-- npm or yarn
+- Blender (for 3D avatar generation)
 - OpenCV
 - TensorFlow
 - MediaPipe
 
-## Project Structure
+### Installation
 
-```
-aura/
-├── backend/                    # FastAPI backend
-│   ├── app.py                 # Main application file
-│   ├── sign_language_model.h5 # Pre-trained ASL recognition model
-│   ├── data.pickle           # Label encoder data
-│   ├── requirements.txt      # Python dependencies
-│   └── static/               # Static files
-├── frontend/                  # React frontend
-│   ├── src/                  # Source files
-│   ├── public/               # Public assets
-│   └── package.json          # Dependencies
-└── README.md                 # This file
+1. Clone and setup backend:
+```bash
+git clone https://github.com/rsr1510/Aura.git
+cd Aura
+python -m venv .venv
+.venv\Scripts\activate  # On Windows
+cd backend
+pip install -r requirements.txt
 ```
 
-## Important Note
+2. Setup frontend:
+```bash
+cd ../frontend
+npm install
+cp .env.example .env  # Configure REACT_APP_API_URL if needed
+```
 
-This repository includes pre-trained machine learning models required for ASL recognition:
-- `backend/sign_language_model.h5`: The main ASL recognition model
-- `backend/data.pickle`: Label encoder data for ASL recognition
+### Running the Application
+1. Start backend server:
+```bash
+cd backend
+python app.py
+```
 
-These files are included to ensure the project works immediately after cloning.
+2. Start frontend development server:
+```bash
+cd frontend
+npm start
+```
 
-## Setup Instructions
+## 🔄 Current Status
+- Core ASL recognition system: ✅ Complete
+- Speech-to-Text conversion: ✅ Complete
+- Emotion-based voice generation: ✅ Complete
+- 3D Avatar rendering: ⚠️ Partially complete (rendering bug pending)
+- Word gesture with emotion detection: ⚠️ Ready but pending integration
 
-### Backend Setup
+## 📝 Note
+This project is part of an academic demonstration showcasing the possibilities of AI-powered communication assistance for the deaf and hard of hearing community. The repository includes pre-trained models (`sign_language_model.h5` and `data.pickle`) to ensure immediate functionality after cloning.
 
-1. Create and activate a virtual environment:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-   ```
-
-2. Install dependencies:
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   ```
-
-3. Start the backend server:
-   ```bash
-   python app.py
-   ```
-
-### Frontend Setup
-
-1. Install dependencies:
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-2. Create environment file:
-   ```bash
-   cp .env.example .env
-   ```
-
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-
-## Environment Variables
-
-### Frontend (.env)
-- `REACT_APP_API_URL`: Backend API URL (default: http://localhost:8000)
-
-## Deployment
-
-### Backend Deployment
-1. Ensure all requirements are installed:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. The ML models (sign_language_model.h5 and data.pickle) are included in the repository
-3. Configure your production server (e.g., Gunicorn, Uvicorn) with the appropriate host and port
-
-### Frontend Deployment
-1. Build the production version:
-   ```bash
-   npm run build
-   ```
-2. Deploy the contents of the `build` directory to your web server
-3. Configure your web server to serve the static files
-4. Update the `.env` file with the production backend URL
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
+## 📜 License
 This project is licensed under the MIT License - see the LICENSE file for details. 
