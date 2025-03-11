@@ -1,0 +1,163 @@
+
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00ff99;
+}
+
+/* testi Section */
+.testi {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+    text-align: center;
+}
+
+.testi-card {
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testi-card:hover {
+    transform: scale(1.05);
+}
+
+.testi-card h3 {
+    color: #00ff99;
+    font-size: 22px;
+}
+
+.testi-card p {
+    color: #bbb;
+    font-size: 16px;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(243, 246, 243, 0.223);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(243, 246, 243, 0.223);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 30px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Hero Section with Background */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    text-align: left;
+    position: relative;
+    background: url('..\\public\\images\\hero-bg.png') center/cover no-repeat;
+    min-height: 50vh;
+    color: #fff;
+}
+
+/* Adding a Dark Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark Overlay */
+    z-index: 1;
+}
+
+/* Ensuring Content Stays Above Overlay */
+.hero-content,
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+/* Styling Hero Text */
+.hero-content h2 {
+    font-size: 42px;
+    color: #00ff99;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background-color: #00ff99;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #0a0a0a;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #00cc77;
+}
+
+/* Styling Hero Image */
+.hero-image img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 153, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px;
+    }
+
+    .hero-content {
+        margin-bottom: 30px;
+    }
+}
