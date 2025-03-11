@@ -2,21 +2,39 @@
 
 AURA is an innovative ASL (American Sign Language) communication platform that bridges the gap between the deaf and hearing communities through advanced AI and computer vision technologies.
 
-## 🌟 Key Features
+## 🌟 Implemented Features
 
-### 1. Bi-Directional Communication
-- **Sign Language to Speech**: Real-time translation of ASL gestures to spoken words
-- **Speech to Sign Language**: Conversion of spoken words to ASL demonstrations (via 3D avatar)
+### 1. Sign Language Recognition
+- Real-time translation of ASL gestures to speech
+- Custom gesture support through dataset augmentation
+- High-accuracy hand tracking and gesture interpretation using MediaPipe
+- Support for extended ASL vocabulary (including custom-added signs)
 
-### 2. Emotion-Based Voice Generation
-- Intelligent analysis of signed words and emotions
-- Natural and toned voice generation based on detected emotions
-- Dynamic voice modulation for more natural-sounding speech
+### 2. Speech Recognition
+- Real-time speech-to-text conversion
+- Clear and accurate transcription
+- Support for continuous speech recognition
 
-### 3. Custom Gesture Recognition
-- Support for custom ASL gestures
-- Real-time hand tracking and gesture interpretation
-- High-accuracy word gesture recognition
+### 3. Voice Generation
+- Basic text-to-speech conversion
+- Proof of concept for emotion-based voice modulation (implemented separately)
+- Demonstration of natural-sounding speech with tonal variations
+
+## 🔮 Proposed Features
+
+### 1. Complete Bi-Directional Communication
+- ✅ Sign Language to Text/Speech: Currently implemented
+- 🚧 Speech to Sign Language: Proposed feature using 3D avatars
+
+### 2. Advanced Emotion Integration
+- 🚧 Integration of emotion detection with gesture recognition
+- 🚧 Real-time emotion-based voice modulation
+- ✅ Proof of concept for emotion-based voice generation (separate implementation)
+
+### 3. 3D Avatar Visualization
+- 🚧 Text-to-Sign Language visualization (proposed)
+- 🚧 Blender integration for animation generation (partially implemented, rendering issues present)
+- 🚧 Real-time avatar animation
 
 ### 4. 3D Avatar Visualization (Experimental)
 - Text-to-Sign Language visualization using 3D avatars
