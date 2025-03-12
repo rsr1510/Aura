@@ -1,6 +1,6 @@
 # AURA - ASL Understanding and Recognition Assistant
 
-AURA is an innovative ASL (American Sign Language) communication platform that bridges the gap between the deaf and hearing communities through advanced AI and computer vision technologies.
+AURA is an innovative ASL (American Sign Language) communication platform that bridges the gap between the hearing and speech impaired communities through advanced AI and computer vision technologies.
 
 ## 🌟 Implemented Features
 
@@ -125,5 +125,5 @@ npm start
 - Word gesture with emotion detection: ⚠️ Ready but pending integration
 
 ## 📝 Note
-This project is part of an academic demonstration showcasing the possibilities of AI-powered communication assistance for the deaf and hard of hearing community. The repository includes pre-trained models (`sign_language_model.h5` and `data.pickle`) to ensure immediate functionality after cloning.
+This project is part of an academic demonstration showcasing the possibilities of AI-powered communication assistance for the speech and hearing impaired community. The repository includes pre-trained models (`sign_language_model.h5`, `data.pickle`, 'facialemotionmodel.json' etc.) to ensure immediate functionality after cloning.
 
