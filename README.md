@@ -47,6 +47,8 @@ aura/
 │   ├── gesture_training.py    # Code to train the gestures for detection
 │   ├── action (1).h5          # Trained model for gesture recognition
 │   ├── emotion_training.py     # Code to train for detection of emotioins while detecting gestures
+│   ├── facialemotionmodel (1).json    # Trained model for facial emotion recognition, containing tag names
+│   ├── emotionandgesture.py    # Code to detect emotion and gesture simultaneously
 ├── backend/                    # FastAPI backend
 │   ├── app.py                 # Main FastAPI server with API endpoints
 │   ├── training.py            # Model training script using ASL dataset
@@ -125,5 +127,3 @@ npm start
 ## 📝 Note
 This project is part of an academic demonstration showcasing the possibilities of AI-powered communication assistance for the deaf and hard of hearing community. The repository includes pre-trained models (`sign_language_model.h5` and `data.pickle`) to ensure immediate functionality after cloning.
 
-## 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details. 
